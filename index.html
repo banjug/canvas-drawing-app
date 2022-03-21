@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drawing App</title>
+  </head>
+  <body>
+    <main>
+      <canvas id="canvas" height="768" width="1366"></canvas>
+      <div id="toolbox">
+        <div id="brush-control">
+          <button onclick="decreaseBtn()" id="decrease">Spessore -</button>
+          <span id="brushSizeElement">10</span>
+          <button onclick="increaseBtn()" id="increase">Spessore +</button>
+          <label for="colorElement">Selezione colore</label>
+          <input type="color" id="colorElement" />
+        </div>
+        <button id="fillElement">Riempi</button>
+        <button id="clearElement">Svuota</button>
+        <button id="downloadElement" onclick="downloadImage()">Download</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
