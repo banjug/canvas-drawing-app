@@ -48,13 +48,13 @@ let isPressed = false;
 let x = undefined;
 let y = undefined;
 
-canvas.addEventListener("mousedown", () => {
+canvas.addEventListener("pointerdown", () => {
   // se il mouse è premuto all'interno del canvas salva le coordinate
   isPressed = true;
   x = e.offsetX;
   y = e.offsetY;
 });
-canvas.addEventListener("mouseup", () => {
+canvas.addEventListener("pointerup", () => {
   // quando non è più cliccato le svuota
   isPressed = false;
   x = undefined;
@@ -77,7 +77,7 @@ function brushStroke(x1, y1, x2, y2) {
   context.lineWidth = brushSize * 2;
   context.stroke();
 }
-canvas.addEventListener("mousemove", (e) => {
+canvas.addEventListener("pointermove", (e) => {
   // se il mouse è cliccato e viene spostato all'interno del canvas salva le coordinate finali
   if (isPressed) {
     const x2 = e.offsetX;
